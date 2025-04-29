@@ -247,23 +247,5 @@ window.addEventListener('load', function() {
   }, 1000);
 });
 
-document.querySelector('.close-popup').addEventListener('click', function() {
-  document.getElementById('popup-ad').style.display = 'none';
-});
-window.addEventListener('click', function(event) {
-  if (event.target == document.getElementById('popup-ad')) {
-    document.getElementById('popup-ad').style.display = 'none';
-  }
-});
-document.querySelector('.close-popup').addEventListener('click', function() {
-  document.getElementById('popup-ad').style.display = 'none';
-});
-window.addEventListener('click', function(event) {
-  if (event.target == document.getElementById('popup-ad')) {
-    document.getElementById('popup-ad').style.display = 'none';
-  }
-});
 
   </script>
-
-<?php endif; ?>

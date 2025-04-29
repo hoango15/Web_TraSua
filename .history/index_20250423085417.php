@@ -223,47 +223,7 @@ include 'includes/header.php';
   }
 }
 
+
+
+
   </style>
-
-  <script>
-document.addEventListener("DOMContentLoaded", function() {
-  const isLoggedIn = <?= isset($_SESSION['user_id']) ? 'true' : 'false' ?>;
-
-  if (!isLoggedIn) {
-    const restrictedLinks = document.querySelectorAll("a, .slide-btn, .popup-btn");
-
-    restrictedLinks.forEach(function(link) {
-      link.addEventListener("click", function(e) {
-        e.preventDefault();
-        window.location.href = "./pages/login.php";
-      });
-    });
-  }
-});
-window.addEventListener('load', function() {
-  setTimeout(function() {
-    document.getElementById('popup-ad').style.display = 'block';
-    document.cookie = "popup_shown=true; max-age=86400; path=/";
-  }, 1000);
-});
-
-document.querySelector('.close-popup').addEventListener('click', function() {
-  document.getElementById('popup-ad').style.display = 'none';
-});
-window.addEventListener('click', function(event) {
-  if (event.target == document.getElementById('popup-ad')) {
-    document.getElementById('popup-ad').style.display = 'none';
-  }
-});
-document.querySelector('.close-popup').addEventListener('click', function() {
-  document.getElementById('popup-ad').style.display = 'none';
-});
-window.addEventListener('click', function(event) {
-  if (event.target == document.getElementById('popup-ad')) {
-    document.getElementById('popup-ad').style.display = 'none';
-  }
-});
-
-  </script>
-
-<?php endif; ?>

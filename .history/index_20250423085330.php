@@ -145,6 +145,7 @@ include 'includes/header.php';
   animation: popupFadeIn 0.5s;
 }
 
+
 @keyframes popupFadeIn {
   from {
     opacity: 0;
@@ -157,113 +158,7 @@ include 'includes/header.php';
   }
 }
 
-.close-popup {
-  position: absolute;
-  right: 15px;
-  top: 15px;
-  color: #fff;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-  z-index: 10;
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
-}
 
-.popup-image {
-  width: 100%;
-  height: auto;
-}
 
-.popup-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-.popup-text {
-  padding: 20px;
-  text-align: center;
-}
-
-.popup-text h3 {
-  margin-top: 0;
-  color: #333;
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.popup-text p {
-  color: #666;
-  margin-bottom: 20px;
-  line-height: 1.5;
-}
-
-.popup-btn {
-  display: inline-block;
-  background: #d4a017;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-
-.popup-btn:hover {
-  background: #b8860b;
-}
-
-@media (max-width: 768px) {
-  .popup-content {
-    width: 95%;
-    margin: 15% auto;
-  }
-
-  .popup-text h3 {
-    font-size: 20px;
-  }
-}
 
   </style>
-
-  <script>
-document.addEventListener("DOMContentLoaded", function() {
-  const isLoggedIn = <?= isset($_SESSION['user_id']) ? 'true' : 'false' ?>;
-
-  if (!isLoggedIn) {
-    const restrictedLinks = document.querySelectorAll("a, .slide-btn, .popup-btn");
-
-    restrictedLinks.forEach(function(link) {
-      link.addEventListener("click", function(e) {
-        e.preventDefault();
-        window.location.href = "./pages/login.php";
-      });
-    });
-  }
-});
-window.addEventListener('load', function() {
-  setTimeout(function() {
-    document.getElementById('popup-ad').style.display = 'block';
-    document.cookie = "popup_shown=true; max-age=86400; path=/";
-  }, 1000);
-});
-
-document.querySelector('.close-popup').addEventListener('click', function() {
-  document.getElementById('popup-ad').style.display = 'none';
-});
-window.addEventListener('click', function(event) {
-  if (event.target == document.getElementById('popup-ad')) {
-    document.getElementById('popup-ad').style.display = 'none';
-  }
-});
-document.querySelector('.close-popup').addEventListener('click', function() {
-  document.getElementById('popup-ad').style.display = 'none';
-});
-window.addEventListener('click', function(event) {
-  if (event.target == document.getElementById('popup-ad')) {
-    document.getElementById('popup-ad').style.display = 'none';
-  }
-});
-
-  </script>
-
-<?php endif; ?>

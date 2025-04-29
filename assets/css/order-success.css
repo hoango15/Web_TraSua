@@ -1,0 +1,152 @@
+.success-container {
+  padding: 120px 5% 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.success-content {
+  background: white;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+.success-icon {
+  font-size: 80px;
+  color: #28a745;
+  margin-bottom: 20px;
+}
+
+.success-content h1 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.success-message {
+  margin-bottom: 30px;
+  color: #666;
+  font-size: 18px;
+}
+
+.order-info {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.info-item:last-child {
+  margin-bottom: 0;
+}
+
+.info-item .label {
+  font-weight: bold;
+  color: #666;
+}
+
+.price {
+  color: #d4a017;
+  font-weight: bold;
+}
+
+.payment-status.paid {
+  color: #155724;
+}
+
+.payment-status.unpaid {
+  color: #721c24;
+}
+
+.payment-reminder {
+  background: #fff3cd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.payment-reminder p {
+  margin-bottom: 15px;
+  color: #856404;
+}
+
+.order-status {
+  margin-bottom: 30px;
+}
+
+.order-status p {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.success-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #d4a017;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #b8860b;
+}
+
+.btn.view-order {
+  background: #17a2b8;
+}
+
+.btn.view-order:hover {
+  background: #138496;
+}
+
+.btn.continue-shopping {
+  background: #28a745;
+}
+
+.btn.continue-shopping:hover {
+  background: #218838;
+}
+
+.btn.payment {
+  background: #a30064;
+}
+
+.btn.payment:hover {
+  background: #7d004d;
+}
+
+@media (max-width: 576px) {
+  .success-container {
+    padding: 100px 15px 40px;
+  }
+
+  .success-content {
+    padding: 20px;
+  }
+
+  .success-icon {
+    font-size: 60px;
+  }
+}

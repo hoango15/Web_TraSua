@@ -265,5 +265,3 @@ window.addEventListener('click', function(event) {
 });
 
   </script>
-
-<?php endif; ?>
