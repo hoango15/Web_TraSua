@@ -1,0 +1,161 @@
+/* Slider Management Styles */
+.slider-container {
+  margin-top: 20px;
+}
+
+.slider-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.slider-image-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.image-preview {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+}
+
+.image-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-status {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.image-status.active {
+  background: #d4edda;
+  color: #155724;
+}
+
+.image-status.inactive {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.image-info {
+  padding: 15px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.image-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.image-order {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.order-input {
+  width: 60px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.image-actions {
+  display: flex;
+  padding: 15px;
+  gap: 10px;
+}
+
+.image-actions a {
+  flex: 1;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 4px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.edit-btn {
+  background: #3498db;
+  color: white;
+}
+
+.toggle-btn {
+  background: #f39c12;
+  color: white;
+}
+
+.delete-btn {
+  background: #e74c3c;
+  color: white;
+}
+
+.no-images {
+  grid-column: 1 / -1;
+  background: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-actions {
+  margin-top: 20px;
+  grid-column: 1 / -1;
+  text-align: right;
+}
+
+
+.current-image {
+  margin-top: 10px;
+}
+
+.current-image p {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.current-image img {
+  max-width: 300px;
+  max-height: 150px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-group input {
+  margin-right: 10px;
+  width: auto;
+}
+
+.form-section {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.form-section h3 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .slider-images {
+    grid-template-columns: 1fr;
+  }
+}
