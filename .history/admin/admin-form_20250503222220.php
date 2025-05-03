@@ -142,7 +142,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><?php echo $page_title; ?> - KTea Shop Admin</title>
+  <title><?php echo $page_title; ?> - KTeaShop Admin</title>
   <link rel="stylesheet" href="css/admin.css">
 </head>
 
